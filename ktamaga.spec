@@ -9,8 +9,10 @@ Source0:	http://dl.sourceforge.net/ktamaga/%{name}-%{version}.tar.gz
 # Source0-md5:	84e02759e7ab549993f8b68a7509c8de
 Patch0:		%{name}-desktop.patch
 URL:		http://ktamaga.sourceforge.net/
+BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.3.2
 BuildRequires:	qt-devel >= 3.3.3
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,19 +26,19 @@ Ktamaga to emulator Tamagotchi dla KDE.
 %patch0 -p1
 
 %build
+cp -f /usr/share/automake/config.* admin
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir=%{_kdedocdir} \
+	kdelnkdir=%{_desktopdir}
 
-install -d $RPM_BUILD_ROOT%{_kdedocdir}
-mv -f $RPM_BUILD_ROOT{%{_docdir}/HTML/*,%{_kdedocdir}}
-mv -f $RPM_BUILD_ROOT{%{_datadir}/applnk/Games,%{_desktopdir}}/ktamaga.desktop
+rm -f $RPM_BUILD_ROOT%{_datadir}/apps/ktamaga/Makefile*
 
 %find_lang %{name} --with-kde
 
