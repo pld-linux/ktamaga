@@ -1,0 +1,21 @@
+diff -burN ktamaga-0.7.2.orig/ktamaga/ktamaga.desktop ktamaga-0.7.2/ktamaga/ktamaga.desktop
+--- ktamaga-0.7.2.orig/ktamaga/ktamaga.desktop	2005-01-24 23:04:32.101917904 +0100
++++ ktamaga-0.7.2/ktamaga/ktamaga.desktop	2005-01-24 23:07:34.685161032 +0100
+@@ -1,10 +1,12 @@
+ [Desktop Entry]
++Encoding=UTF-8
++Name=Ktamaga
++Comment=Tamagotchi emulator for KDE
++Comment[pl]=Emulator Tamagotchi dla KDE
+ Exec=ktamaga
++Terminal=false
+ Icon=ktamaga.png
+ Type=Application
++Categories=Qt;KDE;Game;
+ DocPath=ktamaga/index.html
+-Comment=
+-Comment[de]=
+-Terminal=0
+-Name=Ktamaga
+-Name[de]=Ktamaga
++# vi: encoding=utf-8
