@@ -10,7 +10,6 @@ Source0:	http://dl.sourceforge.net/ktamaga/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop.patch
 URL:		http://ktamaga.sourceforge.net/
 BuildRequires:	kdebase-devel >= 3.3.2
-BuildRequires:	sed >= 4.1.2
 BuildRequires:	qt-devel  >= 3.3.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
