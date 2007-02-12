@@ -1,5 +1,5 @@
 Summary:	Tamagotchi emulator
-Summary(pl):	Emulator tamagotchi
+Summary(pl.UTF-8):   Emulator tamagotchi
 Name:		ktamaga
 Version:	0.7.2
 Release:	1
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KTamaga is a FREE Tamagotchi emulator for X-Window systems with KDE.
 
-%description -l pl
+%description -l pl.UTF-8
 Ktamaga to emulator Tamagotchi dla KDE.
 
 %prep
