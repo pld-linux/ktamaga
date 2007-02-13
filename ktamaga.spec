@@ -1,5 +1,5 @@
 Summary:	Tamagotchi emulator
-Summary(pl.UTF-8):   Emulator tamagotchi
+Summary(pl.UTF-8):	Emulator tamagotchi
 Name:		ktamaga
 Version:	0.7.2
 Release:	1
