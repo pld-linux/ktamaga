@@ -11,7 +11,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://ktamaga.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.3.2
-BuildRequires:	qt-devel >= 3.3.3
+BuildRequires:	qt-devel >= 6:3.3.3
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
